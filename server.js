@@ -1,6 +1,5 @@
-const { urlencoded } = require('express');
 const express = require('express');
-const { json } = require('express/lib/response');
+const mysql2 = require('mysql2');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
