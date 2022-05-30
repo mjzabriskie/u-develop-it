@@ -1,5 +1,4 @@
 const express = require('express');
-const res = require('express/lib/response');
 const mysql = require('mysql2');
 const inputCheck = require('./utils/inputCheck');
 const PORT = process.env.PORT || 3001;
@@ -39,7 +38,7 @@ app.get('/api/candidates', (req, res) => {
 });
 
 //Get a single candidate
-app.get('/api/candidates/:id', (req, res) => {
+app.get('/api/candidate/:id', (req, res) => {
     const sql = `SELECT candidates.*, parties.name
     AS party_name
     FROM candidates
